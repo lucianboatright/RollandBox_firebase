@@ -1,0 +1,35 @@
+.post__image {
+  width: 160px;
+  /* display: inline-block; */
+}
+
+.post__header {
+  display: flex;
+  /* justify-content: space-between; */
+}
+
+.post__avatar {
+  border-radius: 50%;
+  height: 2rem;
+  
+}
+
+.post__username {
+
+}
+
+.post_watchname {
+
+}
+
+.post__watchname {
+
+}
+
+.post__watchinfo {
+
+}
+
+.post__comments {
+  
+}
