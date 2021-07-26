@@ -11,7 +11,7 @@ function App() {
 
       </div>
       <h1>POSTS</h1>
-      <Post />
+      <Post className="" />
       {/* Header */}
       {/* Post */}
       {/* */}

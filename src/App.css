@@ -13,3 +13,7 @@
   border-bottom: 1px solid black;;
   object-fit: contain;
 }
+
+.post__component {
+  padding: 14px
+}

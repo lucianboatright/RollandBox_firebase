@@ -1,9 +1,15 @@
+.post {
+  /* border: 1px solid lightgray; */
+}
+
 .post__image {
   width: 160px;
+  padding-left: 3px;
   /* display: inline-block; */
 }
 
 .post__header {
+  padding: 4px;
   display: flex;
   /* justify-content: space-between; */
 }
@@ -15,21 +21,30 @@
 }
 
 .post__username {
-
+  font-size: 1rem;
 }
 
 .post_watchname {
-
+  font-size: 1rem;
 }
 
 .post__watchname {
-
+  padding-left: 3px;
+  font-size: 1rem;
 }
 
 .post__watchinfo {
+  padding-left: 3px;
+  font-size: .6rem;
+  max-width: 9rem;
 
 }
 
 .post__comments {
-  
+  padding-left: 3px;
+  font-size: .6rem;
+}
+.post__comments_title {
+  padding-left: 3px;
+  font-size: .7rem;
 }
