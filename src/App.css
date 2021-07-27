@@ -17,3 +17,12 @@
 .post__component {
   padding: 14px
 }
+
+.post__flexbox {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: flex-start;
+  align-content: flex-start;
+}

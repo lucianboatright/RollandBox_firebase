@@ -1,5 +1,6 @@
 .post {
   /* border: 1px solid lightgray; */
+  margin-right: 30px;
 }
 
 .post__image {
@@ -15,13 +16,30 @@
 }
 
 .post__avatar {
-  border-radius: 50%;
-  height: 2rem;
+  /* border-radius: 50%; */
+  /* height: .5rem; */
+  size: 2;
   
+}
+
+.post__comment__input[type=text] {
+  padding-left: 3px;
+  font-size: .6rem;
+  width: 70%;
+  /* padding: 12px 20px; */
+  margin: 8px 0;
+  box-sizing: border-box;
+  border: 1px solid #555;
+  outline: none;
+}
+input[type=text]:focus {
+  background-color: lightblue;
 }
 
 .post__username {
   font-size: 1rem;
+  margin-top: .4rem;
+  width: 50%;
 }
 
 .post_watchname {
@@ -36,7 +54,7 @@
 .post__watchinfo {
   padding-left: 3px;
   font-size: .6rem;
-  max-width: 9rem;
+  max-width: 8rem;
 
 }
 
