@@ -3,6 +3,7 @@ import Modal from '@material-ui/core/Modal';
 import '../styling/SignUp_Modal.css';
 import { Button, Input, makeStyles } from '@material-ui/core';
 import PropTypes from 'prop-types';
+import { db, auth } from '../firebase/firebase.js';
 
 import watchBoxLogo from '../images/watchbox.jpg'
 
@@ -38,12 +39,44 @@ export default function Signup_Modal({ open, onClose }) {
   const [username, setUserUsername] = useState('');
   const [email, setUserEmail] = useState('');
   const [password, setUserPassword] = useState('');
+  const [user, setUser] =useState(null);
+
+  const handleSubmit = (e) => {
+    e.preventDefault();
+    console.log('USERNAME', username);
+    console.log('email', email);
+    console.log('passoerd', password);
+    auth.createUserWithEmailAndPassword(email, password).catch((error) => alert(error.message));
+    setUserUsername('');
+    setUserPassword('');
+    setUserEmail('');
+    onClose();
+  };
+
+  useEffect(() => {
+    auth.onAuthStateChanged((authUser) => {
+      if (authUser) {
+        //userlogged
+        setUserEmail(authUser);
+        
+        if (authUser.displayName) {
+          // dont update
+        } else {
+          return authUser.updateProfile({
+            displayName: username,
+          });
+        }
+      } else {
+        setUser(null);
+      }
+    })
+  }, [user, username]);
 
   if (!open) return null;
   return (
     <Modal
     open={open}
-    // onClose={() => setOpen(false)}
+    onClose={onClose}
   >
     <div style={modalStyle} className={classes.paper}>
       <form>
@@ -83,7 +116,7 @@ export default function Signup_Modal({ open, onClose }) {
                   }}
                 type="button"
                 value="submit"
-                onClick={onClose}
+                onClick={handleSubmit}
               >SignUp</Button>
             </div>
             <div className="signup__image">

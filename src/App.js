@@ -10,39 +10,39 @@ import Signup_Modal from './components/Signup_Modal';
 import watchBoxLogo from './images/watchbox.jpg'
 
 
-function rand() {
-  return Math.round(Math.random() * 20) - 10;
-}
+// function rand() {
+//   return Math.round(Math.random() * 20) - 10;
+// }
 
-function getModalStyle() {
-  const top = 50;
-  const left = 50;
+// function getModalStyle() {
+//   const top = 50;
+//   const left = 50;
 
-  return {
-    top: `${top}%`,
-    left: `${left}%`,
-    transform: `translate(-${top}%, -${left}%)`,
-  };
-}
+//   return {
+//     top: `${top}%`,
+//     left: `${left}%`,
+//     transform: `translate(-${top}%, -${left}%)`,
+//   };
+// }
 
-const useStyles = makeStyles((theme) => ({
-  paper: {
-    position: 'absolute',
-    width: 400,
-    backgroundColor: theme.palette.background.paper,
-    border: '2px solid #000',
-    boxShadow: theme.shadows[5],
-    padding: theme.spacing(2, 4, 3),
-  },
-}));
+// const useStyles = makeStyles((theme) => ({
+//   paper: {
+//     position: 'absolute',
+//     width: 400,
+//     backgroundColor: theme.palette.background.paper,
+//     border: '2px solid #000',
+//     boxShadow: theme.shadows[5],
+//     padding: theme.spacing(2, 4, 3),
+//   },
+// }));
 
 
 function App() {
   const [watch, setWatches] = useState([]);
   const [isOpen, setOpen] = useState(false);
 
-  const classes = useStyles();
-  const [modalStyle] = React.useState(getModalStyle);
+  // const classes = useStyles();
+  // const [modalStyle] = React.useState(getModalStyle);
   // const [username, setUserUsername] = useState('');
   // const [email, setUserEmail] = useState('');
   // const [password, setUserPassword] = useState('');
@@ -64,7 +64,7 @@ function App() {
       <div className="app_Header">
         <img className="app_Header_image" id src={titleImage} alt="" style={{width: "120px"}} />
         <Button onClick={() => setOpen(true)}>Sign up</Button>
-        <Signup_Modal open={isOpen} />
+        <Signup_Modal open={isOpen} onClose={() => setOpen(false)} />
       </div>
       <h1>POSTS</h1>
       <div className="post__flexbox">
