@@ -4,7 +4,10 @@ import Watch from './components/Watch'
 import titleImage from './images/watchrollfullopen.webp';
 import { db } from './firebase/firebase.js';
 import { Button, Input, makeStyles } from '@material-ui/core';
-import Modal from './components/Signup_Modal';
+import Signup_Modal from './components/Signup_Modal';
+// import Modal from '@material-ui/core/Modal';
+
+import watchBoxLogo from './images/watchbox.jpg'
 
 
 function rand() {
@@ -35,13 +38,14 @@ const useStyles = makeStyles((theme) => ({
 
 
 function App() {
+  const [watch, setWatches] = useState([]);
+  const [isOpen, setOpen] = useState(false);
+
   const classes = useStyles();
   const [modalStyle] = React.useState(getModalStyle);
-  const [watch, setWatches] = useState([]);
-  const [open, setOpen] = useState(false);
-  const [username, setUserUsername] = useState('');
-  const [email, setUserEmail] = useState('');
-  const [password, setUserPassword] = useState('');
+  // const [username, setUserUsername] = useState('');
+  // const [email, setUserEmail] = useState('');
+  // const [password, setUserPassword] = useState('');
 
   useEffect(() => {
     db.collection('watches').onSnapshot(snapshot => {
@@ -59,8 +63,8 @@ function App() {
     <div className="app">
       <div className="app_Header">
         <img className="app_Header_image" id src={titleImage} alt="" style={{width: "120px"}} />
-        <Modal />
         <Button onClick={() => setOpen(true)}>Sign up</Button>
+        <Signup_Modal open={isOpen} />
       </div>
       <h1>POSTS</h1>
       <div className="post__flexbox">
