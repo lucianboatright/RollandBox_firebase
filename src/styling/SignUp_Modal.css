@@ -1,0 +1,18 @@
+.signup__image {
+  height: 9rem;
+}
+
+.signup__header {
+  margin-bottom: .5rem;
+  font-family: 'Trebuchet MS';
+}
+
+.signup__button {
+  color: aqua;
+}
+
+.signup__input__grid {
+  display: flex;
+  justify-content: center;
+  
+}

@@ -1,28 +1,28 @@
-.post {
+.watch {
   /* border: 1px solid lightgray; */
   margin-right: 30px;
 }
 
-.post__image {
+.watch__image {
   width: 160px;
   padding-left: 3px;
   /* display: inline-block; */
 }
 
-.post__header {
+.watch__header {
   padding: 4px;
   display: flex;
   /* justify-content: space-between; */
 }
 
-.post__avatar {
+.watch__avatar {
   /* border-radius: 50%; */
   /* height: .5rem; */
   size: 2;
   
 }
 
-.post__comment__input[type=text] {
+.watch__comment__input[type=text] {
   padding-left: 3px;
   font-size: .6rem;
   width: 70%;
@@ -36,33 +36,34 @@ input[type=text]:focus {
   background-color: lightblue;
 }
 
-.post__username {
+.watch__username {
   font-size: 1rem;
   margin-top: .4rem;
   width: 50%;
 }
 
-.post_watchname {
+.watch_watchname {
   font-size: 1rem;
 }
 
-.post__watchname {
+.watch__watchname {
   padding-left: 3px;
   font-size: 1rem;
 }
 
-.post__watchinfo {
+.watch__watchinfo {
   padding-left: 3px;
   font-size: .6rem;
   max-width: 8rem;
 
 }
 
-.post__comments {
+.watch__comments {
   padding-left: 3px;
   font-size: .6rem;
 }
-.post__comments_title {
+.watch__comments_title {
   padding-left: 3px;
   font-size: .7rem;
 }
+
